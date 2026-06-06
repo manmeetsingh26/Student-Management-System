@@ -4,6 +4,10 @@ using namespace std;
 int main() {
     int choice;
 
+    string studentNames[100];
+    int rollNumbers[100];
+    int studentCount = 0;
+
     do {
         cout << "\n===== Student Management System =====\n";
         cout << "1. Add Student\n";
@@ -15,11 +19,32 @@ int main() {
 
         switch (choice) {
             case 1:
-                cout << "Add Student feature coming soon.\n";
+                if (studentCount < 100) {
+                    cout << "Enter Student Name: ";
+                    cin >> studentNames[studentCount];
+
+                    cout << "Enter Roll Number: ";
+                    cin >> rollNumbers[studentCount];
+
+                    studentCount++;
+
+                    cout << "Student added successfully.\n";
+                } else {
+                    cout << "Student limit reached.\n";
+                }
                 break;
 
             case 2:
-                cout << "View Students feature coming soon.\n";
+                if (studentCount == 0) {
+                    cout << "No student records found.\n";
+                } else {
+                    cout << "\n===== Student Records =====\n";
+
+                    for (int i = 0; i < studentCount; i++) {
+                        cout << i + 1 << ". Name: " << studentNames[i]
+                             << " | Roll Number: " << rollNumbers[i] << endl;
+                    }
+                }
                 break;
 
             case 3:
