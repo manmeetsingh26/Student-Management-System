@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
@@ -18,8 +19,10 @@ int main() {
         cin >> choice;
 
         switch (choice) {
+
             case 1:
                 if (studentCount < 100) {
+
                     cout << "Enter Student Name: ";
                     cin >> studentNames[studentCount];
 
@@ -29,6 +32,7 @@ int main() {
                     studentCount++;
 
                     cout << "Student added successfully.\n";
+
                 } else {
                     cout << "Student limit reached.\n";
                 }
@@ -36,20 +40,48 @@ int main() {
 
             case 2:
                 if (studentCount == 0) {
+
                     cout << "No student records found.\n";
+
                 } else {
+
                     cout << "\n===== Student Records =====\n";
 
                     for (int i = 0; i < studentCount; i++) {
-                        cout << i + 1 << ". Name: " << studentNames[i]
-                             << " | Roll Number: " << rollNumbers[i] << endl;
+
+                        cout << "\nStudent " << i + 1 << endl;
+                        cout << "Name: " << studentNames[i] << endl;
+                        cout << "Roll Number: " << rollNumbers[i] << endl;
                     }
                 }
                 break;
 
-            case 3:
-                cout << "Search Student feature coming soon.\n";
+            case 3: {
+                int searchRoll;
+                bool found = false;
+
+                cout << "Enter Roll Number to Search: ";
+                cin >> searchRoll;
+
+                for (int i = 0; i < studentCount; i++) {
+
+                    if (rollNumbers[i] == searchRoll) {
+
+                        cout << "\n===== Student Found =====\n";
+                        cout << "Name: " << studentNames[i] << endl;
+                        cout << "Roll Number: " << rollNumbers[i] << endl;
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    cout << "Student not found.\n";
+                }
+
                 break;
+            }
 
             case 4:
                 cout << "Thank you for using Student Management System.\n";
