@@ -1,8 +1,6 @@
-
-
 # 🎓 Student Management System
 
-A C++ based Student Management System developed to manage student records using fundamental programming concepts. This project demonstrates record management operations such as adding, viewing, searching, and deleting student information through a menu-driven interface.
+A C++ based Student Management System developed to manage student records using fundamental programming concepts. This project demonstrates record management operations such as adding, viewing, searching, deleting, and updating student information through a menu-driven interface.
 
 ---
 
@@ -68,6 +66,18 @@ Features:
 
 ---
 
+## ✅ Update Student
+
+Allows users to update existing student records using roll numbers.
+
+Features:
+
+- Update student name
+- Update roll number
+- Modify stored records easily
+
+---
+
 ## ✅ Menu Driven Interface
 
 Simple and user-friendly console interface for managing student records.
@@ -83,7 +93,7 @@ Simple and user-friendly console interface for managing student records.
 | View Students | ✅ Completed |
 | Search Student | ✅ Completed |
 | Delete Student | ✅ Completed |
-| Update Student Record | 🔄 Planned |
+| Update Student Record | ✅ Completed |
 | File Handling | 🔄 Planned |
 | Attendance Management | 🔄 Planned |
 | Marks Management | 🔄 Planned |
@@ -99,6 +109,7 @@ Simple and user-friendly console interface for managing student records.
 - Conditional Statements
 - Switch Case
 - Searching Algorithms
+- Record Management
 
 ---
 
@@ -110,67 +121,3 @@ Student-Management-System
 ├── main.cpp
 ├── README.md
 └── Roadmap.md
-```
-
----
-
-# 🎯 Learning Objectives
-
-This project helps in understanding:
-
-- Data Storage using Arrays
-- Searching Techniques
-- Record Management
-- Program Design
-- Problem Solving
-- Software Development Workflow
-- Git & GitHub Version Control
-
----
-
-# 🔮 Future Enhancements
-
-## Version 2
-
-- Update Student Record
-- File Handling
-- Save Student Records Permanently
-
-## Version 3
-
-- Attendance Management
-- Marks Management
-- Student Performance Tracking
-
-## Version 4
-
-- Report Generation
-- Database Integration
-- Graphical User Interface (GUI)
-
----
-
-# 👨‍💻 Author
-
-**Manmeet Singh**
-
-🎓 BCA Student — Chandigarh University
-
-💻 Interests:
-
-- Software Development
-- Data Structures & Algorithms
-- Problem Solving
-- Computer Science
-
----
-
-# 📌 Project Status
-
-🚧 Active Development
-
-New features are being added regularly as part of my software development and C++ learning journey.
-
----
-
-⭐ This project represents my practical approach to learning programming through project-based development.
