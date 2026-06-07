@@ -15,7 +15,8 @@ int main() {
         cout << "2. View Students\n";
         cout << "3. Search Student\n";
         cout << "4. Delete Student\n";
-        cout << "5. Exit\n";
+        cout << "5. Update Student\n";
+        cout << "6. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -107,7 +108,36 @@ int main() {
                 break;
             }
 
-            case 5:
+            case 5: {
+                int updateRoll;
+                bool found = false;
+
+                cout << "Enter Roll Number to Update: ";
+                cin >> updateRoll;
+
+                for (int i = 0; i < studentCount; i++) {
+                    if (rollNumbers[i] == updateRoll) {
+                        cout << "Enter New Student Name: ";
+                        cin >> studentNames[i];
+
+                        cout << "Enter New Roll Number: ";
+                        cin >> rollNumbers[i];
+
+                        cout << "Student record updated successfully.\n";
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    cout << "Student not found.\n";
+                }
+
+                break;
+            }
+
+            case 6:
                 cout << "Thank you for using Student Management System.\n";
                 break;
 
@@ -115,7 +145,7 @@ int main() {
                 cout << "Invalid choice. Please try again.\n";
         }
 
-    } while (choice != 5);
+    } while (choice != 6);
 
     return 0;
 }
