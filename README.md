@@ -93,8 +93,8 @@ Simple and user-friendly console interface for record management.
 | Search Student | ✅ Completed |
 | Delete Student | ✅ Completed |
 | Update Student | ✅ Completed |
-| File Handling | 🔄 Planned |
-| Attendance Management | 🔄 Planned |
+| File Handling | ✅ Completed |
+| Attendance Management | ✅ Completed |
 | Marks Management | 🔄 Planned |
 | Student Reports | 🔄 Planned |
 
@@ -144,16 +144,16 @@ This project helps in understanding:
 
 ### 📁 File Handling
 
-- Save student records permanently
-- Load records automatically when the program starts
-- Prevent data loss after closing the application
+- Saves student records permanently
+- Loads records automatically on startup
+- Prevents data loss after program exit
 
 ### 📚 Attendance Management
 
-- Mark student attendance
-- Track attendance percentage
-- Generate attendance summaries
-
+- Stores attendance percentage
+- Displays attendance with student records
+- Allows attendance updates
+  
 ### 📊 Marks Management
 
 - Store subject-wise marks
