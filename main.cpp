@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -7,7 +8,17 @@ int main() {
 
     string studentNames[100];
     int rollNumbers[100];
+    float attendance[100];
+
     int studentCount = 0;
+
+    ifstream inputFile("students.txt");
+
+    while (inputFile >> studentNames[studentCount] >> rollNumbers[studentCount] >> attendance[studentCount]) {
+        studentCount++;
+    }
+
+    inputFile.close();
 
     do {
         cout << "\n===== Student Management System =====\n";
@@ -30,6 +41,9 @@ int main() {
                     cout << "Enter Roll Number: ";
                     cin >> rollNumbers[studentCount];
 
+                    cout << "Enter Attendance Percentage: ";
+                    cin >> attendance[studentCount];
+
                     studentCount++;
 
                     cout << "Student added successfully.\n";
@@ -48,6 +62,7 @@ int main() {
                         cout << "\nStudent " << i + 1 << endl;
                         cout << "Name: " << studentNames[i] << endl;
                         cout << "Roll Number: " << rollNumbers[i] << endl;
+                        cout << "Attendance: " << attendance[i] << "%" << endl;
                     }
                 }
                 break;
@@ -64,6 +79,7 @@ int main() {
                         cout << "\n===== Student Found =====\n";
                         cout << "Name: " << studentNames[i] << endl;
                         cout << "Roll Number: " << rollNumbers[i] << endl;
+                        cout << "Attendance: " << attendance[i] << "%" << endl;
 
                         found = true;
                         break;
@@ -90,6 +106,7 @@ int main() {
                         for (int j = i; j < studentCount - 1; j++) {
                             studentNames[j] = studentNames[j + 1];
                             rollNumbers[j] = rollNumbers[j + 1];
+                            attendance[j] = attendance[j + 1];
                         }
 
                         studentCount--;
@@ -123,6 +140,9 @@ int main() {
                         cout << "Enter New Roll Number: ";
                         cin >> rollNumbers[i];
 
+                        cout << "Enter New Attendance Percentage: ";
+                        cin >> attendance[i];
+
                         cout << "Student record updated successfully.\n";
 
                         found = true;
@@ -137,9 +157,21 @@ int main() {
                 break;
             }
 
-            case 6:
+            case 6: {
+                ofstream outputFile("students.txt");
+
+                for (int i = 0; i < studentCount; i++) {
+                    outputFile << studentNames[i] << " "
+                               << rollNumbers[i] << " "
+                               << attendance[i] << endl;
+                }
+
+                outputFile.close();
+
+                cout << "Student records saved successfully.\n";
                 cout << "Thank you for using Student Management System.\n";
                 break;
+            }
 
             default:
                 cout << "Invalid choice. Please try again.\n";
