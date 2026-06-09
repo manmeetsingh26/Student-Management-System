@@ -12,7 +12,6 @@ int main() {
     float marks[100];
     int studentCount = 0;
 
-    // Load saved student records
     ifstream inputFile("students.txt");
 
     while (inputFile >> studentNames[studentCount]
@@ -31,7 +30,8 @@ int main() {
         cout << "3. Search Student\n";
         cout << "4. Delete Student\n";
         cout << "5. Update Student\n";
-        cout << "6. Exit\n";
+        cout << "6. Generate Student Report\n";
+        cout << "7. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -169,7 +169,54 @@ int main() {
             }
 
             case 6: {
-                // Save all records before exit
+                int reportRoll;
+                bool found = false;
+                char grade;
+
+                cout << "Enter Roll Number to Generate Report: ";
+                cin >> reportRoll;
+
+                for (int i = 0; i < studentCount; i++) {
+                    if (rollNumbers[i] == reportRoll) {
+
+                        if (marks[i] >= 90) {
+                            grade = 'A';
+                        } else if (marks[i] >= 75) {
+                            grade = 'B';
+                        } else if (marks[i] >= 60) {
+                            grade = 'C';
+                        } else if (marks[i] >= 40) {
+                            grade = 'D';
+                        } else {
+                            grade = 'F';
+                        }
+
+                        cout << "\n===== Student Report =====\n";
+                        cout << "Name: " << studentNames[i] << endl;
+                        cout << "Roll Number: " << rollNumbers[i] << endl;
+                        cout << "Attendance: " << attendance[i] << "%" << endl;
+                        cout << "Marks: " << marks[i] << endl;
+                        cout << "Grade: " << grade << endl;
+
+                        if (attendance[i] < 75) {
+                            cout << "Attendance Status: Low Attendance\n";
+                        } else {
+                            cout << "Attendance Status: Satisfactory\n";
+                        }
+
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) {
+                    cout << "Student not found.\n";
+                }
+
+                break;
+            }
+
+            case 7: {
                 ofstream outputFile("students.txt");
 
                 for (int i = 0; i < studentCount; i++) {
@@ -190,7 +237,7 @@ int main() {
                 cout << "Invalid choice. Please try again.\n";
         }
 
-    } while (choice != 6);
+    } while (choice != 7);
 
     return 0;
 }
