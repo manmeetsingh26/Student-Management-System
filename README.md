@@ -1,21 +1,22 @@
 # 🎓 Student Management System
 
-A C++ based Student Management System developed to manage student records using fundamental programming concepts. The project demonstrates how student information can be stored, viewed, searched, updated, and deleted through a menu-driven interface.
+A C++ based Student Management System developed to manage student records efficiently through a menu-driven interface. The project allows users to add, view, search, update, and delete student records while maintaining attendance, marks, and report generation functionality with persistent data storage using file handling.
 
 ---
 
-# 📖 About
+# 📖 About The Project
 
-The Student Management System is designed to strengthen programming fundamentals and provide hands-on experience in building real-world applications using C++.
+The Student Management System is designed to provide hands-on experience with fundamental programming concepts and real-world record management systems.
 
-The project focuses on:
+This project demonstrates:
 
 - Data Management
-- Problem Solving
 - Record Handling
+- File Handling
+- Problem Solving
 - Searching Techniques
 - Software Development Fundamentals
-- Practical Application of Programming Concepts
+- Menu Driven Programming
 
 ---
 
@@ -25,65 +26,122 @@ The project focuses on:
 
 Allows users to:
 
-- Add student names
-- Add roll numbers
-- Store student records
+- Add student name
+- Add roll number
+- Add attendance percentage
+- Add marks
 
 ---
 
 ## ✅ View Students
 
-Displays all student records in a structured format.
+Displays all student records including:
 
-Information displayed:
-
-- Student Name
+- Name
 - Roll Number
+- Attendance Percentage
+- Marks
 
 ---
 
 ## ✅ Search Student
 
-Allows users to search student records using roll numbers.
+Search student records using roll number.
 
-Features:
+Displays:
 
-- Fast record lookup
-- Displays matching student information
+- Student Name
+- Roll Number
+- Attendance
+- Marks
 
 ---
 
-## ✅ Delete Student
+## ✅ Update Student Record
 
-Allows users to remove student records using roll numbers.
+Modify existing student information:
+
+- Name
+- Roll Number
+- Attendance
+- Marks
+
+---
+
+## ✅ Delete Student Record
+
+Remove student records from the system.
 
 Features:
 
 - Record deletion
-- Automatic record reorganization
+- Automatic record shifting
 - Updated student list management
 
 ---
 
-## ✅ Update Student
+## ✅ Attendance Management
 
-Allows users to modify existing student records.
+Track student attendance.
 
 Features:
 
-- Update student name
-- Update roll number
-- Manage records efficiently
+- Store attendance percentage
+- Display attendance records
+- Update attendance information
 
 ---
 
-## ✅ Menu Driven Interface
+## ✅ Marks Management
 
-Simple and user-friendly console interface for record management.
+Manage academic performance.
+
+Features:
+
+- Store student marks
+- Update marks
+- Display marks with records
 
 ---
 
-# 📊 Project Progress
+## ✅ Student Report Generation
+
+Generate detailed student reports.
+
+Report Includes:
+
+- Student Name
+- Roll Number
+- Attendance Percentage
+- Marks
+- Grade
+- Attendance Status
+
+Grade System:
+
+| Marks | Grade |
+|---------|---------|
+| 90 - 100 | A |
+| 75 - 89 | B |
+| 60 - 74 | C |
+| 40 - 59 | D |
+| Below 40 | F |
+
+---
+
+## ✅ File Handling
+
+Student records are saved permanently using file handling.
+
+Features:
+
+- Save student data to file
+- Load data automatically on startup
+- Prevent data loss after program exit
+
+---
+
+## 📊 Project Progress
 
 | Feature | Status |
 |----------|----------|
@@ -95,8 +153,8 @@ Simple and user-friendly console interface for record management.
 | Update Student | ✅ Completed |
 | File Handling | ✅ Completed |
 | Attendance Management | ✅ Completed |
-| Marks Management |  ✅ Completed  |
-| Student Reports | 🔄 Planned |
+| Marks Management | ✅ Completed |
+| Student Report Generation | ✅ Completed |
 
 ---
 
@@ -108,6 +166,7 @@ Simple and user-friendly console interface for record management.
 - Loops
 - Conditional Statements
 - Switch Case
+- File Handling
 - Searching Techniques
 - Record Management Concepts
 
@@ -119,22 +178,22 @@ Simple and user-friendly console interface for record management.
 Student-Management-System
 │
 ├── main.cpp
+├── students.txt
 ├── README.md
-└── Roadmap.md
 ```
 
 ---
 
-# 🎯 Learning Objectives
+# 🎯 Learning Outcomes
 
-This project helps in understanding:
+This project helped strengthen understanding of:
 
-- Data Storage using Arrays
-- Searching Techniques
-- Record Management
-- Menu Driven Programming
-- Program Design
-- Problem Solving
+- C++ Programming
+- Arrays and Data Storage
+- File Handling
+- Record Management Systems
+- Searching Algorithms
+- Menu Driven Programs
 - Software Development Workflow
 - Git & GitHub Version Control
 
@@ -142,41 +201,25 @@ This project helps in understanding:
 
 # 🔮 Future Enhancements
 
-### 📁 File Handling
+### 📈 CGPA Calculator
 
-- Saves student records permanently
-- Loads records automatically on startup
-- Prevents data loss after program exit
+- Calculate student CGPA
+- Generate performance summaries
 
-### 📚 Attendance Management
+### 🏆 Student Ranking System
 
-- Stores attendance percentage
-- Displays attendance with student records
-- Allows attendance updates
-  
-### 📊 Marks Management
-
-- Store subject-wise marks
-- Calculate total marks
-- Calculate percentage and grades
-
-### 📄 Student Report Generation
-
-- Generate complete student reports
-- Display academic performance
-- Show attendance statistics
+- Rank students based on marks
+- Display top performers
 
 ### 🗄 Database Integration
 
-- Store student records in a database
+- Store records in a database
 - Improve scalability
-- Efficient data management
 
 ### 🖥 Graphical User Interface (GUI)
 
-- User-friendly interface
-- Better navigation
-- Improved user experience
+- User-friendly visual interface
+- Better user experience
 
 ---
 
@@ -193,20 +236,18 @@ This project helps in understanding:
 - Problem Solving
 - Computer Science
 
+GitHub: https://github.com/manmeetsingh26
+
+Portfolio: https://manmeetsingh26.github.io/Portfolio-Website/
+
 ---
 
 # 📌 Project Status
 
-🚧 Active Development
+✅ Completed Version 1.0
 
-The project is continuously being improved with new features and enhancements as part of my software development and programming learning journey.
-
----
-
-# 🌟 Project Goal
-
-The goal of this project is to apply programming concepts to a practical use case while strengthening problem-solving abilities, software development skills, and understanding of data management systems.
+The project currently supports complete student record management with attendance tracking, marks management, report generation, and file handling. Future versions will focus on advanced analytics and database integration.
 
 ---
 
-⭐ Learning, Building, and Improving One Feature at a Time.
+⭐ Learning, Building, and Improving Through Real Projects.
