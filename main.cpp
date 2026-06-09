@@ -9,14 +9,16 @@ int main() {
     string studentNames[100];
     int rollNumbers[100];
     float attendance[100];
+    float marks[100];
     int studentCount = 0;
 
-    // Load existing student records from file
+    // Load saved student records
     ifstream inputFile("students.txt");
 
     while (inputFile >> studentNames[studentCount]
                      >> rollNumbers[studentCount]
-                     >> attendance[studentCount]) {
+                     >> attendance[studentCount]
+                     >> marks[studentCount]) {
         studentCount++;
     }
 
@@ -46,6 +48,9 @@ int main() {
                     cout << "Enter Attendance Percentage: ";
                     cin >> attendance[studentCount];
 
+                    cout << "Enter Marks: ";
+                    cin >> marks[studentCount];
+
                     studentCount++;
 
                     cout << "Student added successfully.\n";
@@ -65,6 +70,7 @@ int main() {
                         cout << "Name: " << studentNames[i] << endl;
                         cout << "Roll Number: " << rollNumbers[i] << endl;
                         cout << "Attendance: " << attendance[i] << "%" << endl;
+                        cout << "Marks: " << marks[i] << endl;
                     }
                 }
                 break;
@@ -82,6 +88,7 @@ int main() {
                         cout << "Name: " << studentNames[i] << endl;
                         cout << "Roll Number: " << rollNumbers[i] << endl;
                         cout << "Attendance: " << attendance[i] << "%" << endl;
+                        cout << "Marks: " << marks[i] << endl;
 
                         found = true;
                         break;
@@ -109,12 +116,12 @@ int main() {
                             studentNames[j] = studentNames[j + 1];
                             rollNumbers[j] = rollNumbers[j + 1];
                             attendance[j] = attendance[j + 1];
+                            marks[j] = marks[j + 1];
                         }
 
                         studentCount--;
 
                         cout << "Student deleted successfully.\n";
-
                         found = true;
                         break;
                     }
@@ -145,8 +152,10 @@ int main() {
                         cout << "Enter New Attendance Percentage: ";
                         cin >> attendance[i];
 
-                        cout << "Student record updated successfully.\n";
+                        cout << "Enter New Marks: ";
+                        cin >> marks[i];
 
+                        cout << "Student record updated successfully.\n";
                         found = true;
                         break;
                     }
@@ -160,13 +169,14 @@ int main() {
             }
 
             case 6: {
-                // Save all student records to file before exiting
+                // Save all records before exit
                 ofstream outputFile("students.txt");
 
                 for (int i = 0; i < studentCount; i++) {
                     outputFile << studentNames[i] << " "
                                << rollNumbers[i] << " "
-                               << attendance[i] << endl;
+                               << attendance[i] << " "
+                               << marks[i] << endl;
                 }
 
                 outputFile.close();
