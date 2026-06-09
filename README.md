@@ -95,7 +95,7 @@ Simple and user-friendly console interface for record management.
 | Update Student | ✅ Completed |
 | File Handling | ✅ Completed |
 | Attendance Management | ✅ Completed |
-| Marks Management | 🔄 Planned |
+| Marks Management |  ✅ Completed  |
 | Student Reports | 🔄 Planned |
 
 ---
